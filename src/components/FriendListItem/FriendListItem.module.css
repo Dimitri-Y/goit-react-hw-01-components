@@ -1,0 +1,23 @@
+.item {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.42);
+  display: flex;
+  width: 200px;
+  align-items: center;
+}
+.status {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.status.isOnline {
+  background-color: green;
+}
+.status.isOfline {
+  background-color: red;
+}
+.avatar {
+  border-radius: 25%;
+}
+.name {
+  font-size: 20px;
+}
