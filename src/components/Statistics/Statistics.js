@@ -10,7 +10,7 @@ const Statistics = ({ title, stats }) => {
   return (
     <section className={css['statistics']}>
       <div className={css['block__title']}>
-        <h2 className={css['title']}>{title}</h2>
+        {title && <h2 className={css['title']}>{title}</h2>}
         <ul className={css['stat-list']}>
           {stats.map(stats => (
             <li
@@ -33,7 +33,6 @@ const Statistics = ({ title, stats }) => {
 export default Statistics;
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -41,7 +40,4 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
     })
   ),
-};
-Statistics.defaultProps = {
-  title: 'default',
 };
