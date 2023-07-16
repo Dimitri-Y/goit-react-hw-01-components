@@ -6,7 +6,6 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 const Statistics = ({ title, stats }) => {
-  console.log(title);
   return (
     <section className={css['statistics']}>
       <div className={css['block__title']}>
@@ -33,6 +32,7 @@ const Statistics = ({ title, stats }) => {
 export default Statistics;
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
